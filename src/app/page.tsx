@@ -10,7 +10,7 @@ export default function Home() {
   useEffect(() => {
     async function checkConnection() {
       try {
-        const { data, error } = await supabase.from('users').select('*').limit(1)
+        const { error } = await supabase.from('users').select('*').limit(1)
         if (error) throw error
         setLoading(false)
       } catch (err) {
