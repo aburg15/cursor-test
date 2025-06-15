@@ -24,9 +24,6 @@ export default function SignUpPage() {
         password,
       })
 
-      console.log('Session:', authData.session)
-
-
       if (authError) throw authError
 
       if (authData.user) {
